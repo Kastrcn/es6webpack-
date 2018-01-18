@@ -1,9 +1,11 @@
-var path = require('path');
-var HtmlWebpackPlugin=require('html-webpack-plugin')
+/* eslint-disable */
+
+const path = require('path')
+const HtmlWebpackPlugin=require('html-webpack-plugin')
 module.exports = {
-    entry: [
-        './src/main.js',
-    ],
+    entry: {
+     app:'./src/main.js'
+    },
     output: {
         filename: 'js/bundle.js',
         path: path.resolve(__dirname, 'dist'),
@@ -18,8 +20,9 @@ module.exports = {
     },
     plugins:[
         new HtmlWebpackPlugin({
-            title:"test",
-            filename:"index.html",
+            template: 'dist/index.html',
+            chunks: ['app'],
+            filename: 'index.html',
             hash: true
 
         })
