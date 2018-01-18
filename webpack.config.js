@@ -1,10 +1,11 @@
 /* eslint-disable */
 
+const webpack = require('webpack')
 const path = require('path')
 const HtmlWebpackPlugin=require('html-webpack-plugin')
 module.exports = {
     entry: {
-     app:'./src/main.js'
+     app:'./src/client/index.js'
     },
     output: {
         filename: 'js/bundle.js',
@@ -25,7 +26,11 @@ module.exports = {
             filename: 'index.html',
             hash: true
 
-        })
+        }),
+        new webpack.optimize.OccurrenceOrderPlugin(),
+        new webpack.HotModuleReplacementPlugin(),
+        new webpack.NamedModulesPlugin(),
+        new webpack.NoEmitOnErrorsPlugin(),
     ],
     //isProd
     devtool: true ? false : 'source-map',

@@ -9,6 +9,7 @@ module.exports = {
         "compat"
     ],
     "env": {
+        "browser": true,
         "jest": true
     },
     "rules": {
@@ -21,5 +22,6 @@ module.exports = {
         "semi": [2, "never"],
         //换行风格
         'linebreak-style': ["off", "windows"],
+        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
     }
 };

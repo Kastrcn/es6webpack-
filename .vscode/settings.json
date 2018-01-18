@@ -1,4 +1,5 @@
 {
   "git.autofetch": true,
-  "javascript.validate.enable": false
+  "javascript.validate.enable": false,
+  "editor.tabSize": 2,
 }
