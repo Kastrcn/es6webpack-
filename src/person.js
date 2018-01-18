@@ -10,7 +10,7 @@ class Person {
   }
 
   info() {
-    return `我的名字是${this.name}， 已经${this.age}岁了！`
+    return `name is ${this.name}， age is ${this.age}`
   }
 }
 
